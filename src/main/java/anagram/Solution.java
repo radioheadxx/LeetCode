@@ -6,8 +6,8 @@ public class Solution {
 
     public static void main(String[] args) {
         String s = "anagram";
-        String t = "nagaram";
-        isAnagram(s, t);
+        String t = "naagaram";
+        System.out.println(isAnagram(s, t));
     }
     public static boolean isAnagram(String s, String t) {
         if(s.length() != t.length()) {
@@ -37,4 +37,13 @@ public class Solution {
 //        if (!Arrays.equals(charsS, charsT)) return false;
 //        return true;
 //    }
+}
+
+
+class B extends Solution{
+
+
+    public static void main(String[] args) {
+        B b = new B();
+    }
 }
