@@ -13,8 +13,6 @@ public class Solution1 {
         int[] nums = {2, 5, 5, 15};
         int target = 10;
         twoSum(nums, target);
-
-        System.out.println(Arrays.toString(strings));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -27,10 +25,5 @@ public class Solution1 {
         }
         throw new IllegalArgumentException();
     }
-
-    static String string = "jsjsjsjs" + "\n" + "jdjdjdjdj" + "\n";
-
-    static String[] strings = string.split("\n");
-
 
 }

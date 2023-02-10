@@ -8,6 +8,7 @@ public class BestSolution {
         System.out.println(isAnagram(s, t));
     }
     static boolean isAnagram(String s, String t) {
+
         int[] n = new int[26];
 
         for (char c : s.toCharArray()) {
