@@ -2,38 +2,35 @@ package merge_arrays;
 
 public class Solution {
     public static void main(String[] args) {
-        int[] arr1 = {1, 4, 8, 9, 10};
-        int[] arr2 = {1, 2, 5};
-        int[] result = merge(arr1, arr2);
+        int a[] = {1, 1, 2, 3, 4, 5, 5, 6};
+        int b[] = {3, 3, 5, 6, 7, 8, 8, 9, 9, 9, 9, 10};
+        int[] result = merge(a, b);
         for(int i : result) {
             System.out.print(i);
         }
 
     }
 
-    public static int[] merge(int[] arr1, int[] arr2) {
-        int[] merged = new int[arr1.length+arr2.length];
-        int k = 0;
-        for(int i=0; i<arr1.length; i++) {
-            for(int j=0; j<arr2.length; j++) {
-                if(arr1[i] < arr2[j]) {
-                    merged[k] = arr1[i];
-                    k++;
-                    i++;
+    public static int[] merge(int[] a, int[] b) {
+        int c[] = new int[a.length + b.length];
+        int bCounter = 0;
+        int aCounter = 0;
 
-                }
-                else if (arr1[i] == arr2[j]) {
-                    merged[k] = arr1[i];
-                    merged[k+1] = arr2[j];
-                    k=k+2;
-                } else {
-                        merged[k] = arr2[j];
-                        k++;
-                        j++;
-                    }
-                }
+        for (int i = 0; i < c.length; i++) {
+            if (a[aCounter] < b[bCounter]) {
+                c[i] = a[aCounter];
+                aCounter++;
+            } else if(a[aCounter] > b[bCounter]){
+                    c[i] = b[bCounter];
+                    bCounter++;
+            } else {
+                c[i] = a[aCounter];
+                c[i+1] = c[bCounter];
+                aCounter++;
+                bCounter++;
             }
-        return merged;
+        }
+        return c;
     }
 }
 

@@ -7,9 +7,6 @@ import java.util.stream.Stream;
 public class Solution {
     public static void main(String[] args) {
         System.out.println(isPalindrome("аваd fdf f"));
-        StringBuilder sb = new StringBuilder("sss dds d");
-        sb.reverse();
-        System.out.println(sb);
 
     }
     static boolean isPalindrome(String string) {
