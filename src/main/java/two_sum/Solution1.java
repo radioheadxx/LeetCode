@@ -12,7 +12,7 @@ public class Solution1 {
     public static void main(String[] args) {
         int[] nums = {2, 5, 5, 15};
         int target = 10;
-        twoSum(nums, target);
+        System.out.println(Arrays.toString(twoSum(nums, target)));
     }
 
     public static int[] twoSum(int[] nums, int target) {

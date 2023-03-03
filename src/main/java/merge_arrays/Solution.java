@@ -16,7 +16,7 @@ public class Solution {
         int bCounter = 0;
         int aCounter = 0;
 
-        for (int i = 0; i < c.length; i++) {
+        for (int i = 0; i < c.length-1; i++) {
             if (a[aCounter] < b[bCounter]) {
                 c[i] = a[aCounter];
                 aCounter++;
